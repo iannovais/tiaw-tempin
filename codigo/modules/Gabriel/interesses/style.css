@@ -1,0 +1,53 @@
+main>div>div>div>div {
+  padding: 5px;
+}
+
+.bg-custom {
+  background-color: #042435;;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  font-weight: bolder;
+  color: white;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #b1f3ef;
+}
+
+main {
+  margin-left: 2%;
+  margin-top: 1%;
+  
+}
+body{
+  background-color: #ffffff !important;
+}
+.interesses{
+  display:flex !important;
+  float: left !important;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.btn-group {
+  flex-wrap: wrap;
+}
+
+.btn-check {
+  width: auto;
+  margin-right: 5px;
+}
+.seguir{
+  padding-top: 15%;
+  padding-bottom:2%;
+  float: right;
+  padding-right: 5%;
+}
+#botaoSeguir{
+  border: #042435 1px solid;
+}

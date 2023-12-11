@@ -1,0 +1,88 @@
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-custom {
+    background-color: #042435;;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link {
+    font-weight: bolder;
+    color: white;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link:hover {
+    color: #b1f3ef;
+  }
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    background-color: white;
+    margin-bottom: 100px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #34c0d3;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#tabela {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#tabela th,
+#tabela td {
+    border: 1px solid #34c0d3;
+    padding: 8px;
+    text-align: center;
+}
+
+#tabela th {
+    background-color: #34c0d3;
+    color: white;
+}
+
+#tabela tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+#tabela tbody tr:hover {
+    background-color: #dafffe;
+}
+
+#chart{
+    margin-top: 2%;
+    margin-left: 50px;
+    left: 20%;  
+    color: black;
+}
+
+.bar {
+    fill: #34c0d3; /* Substitua #3498db pela cor desejada para as barras */
+}

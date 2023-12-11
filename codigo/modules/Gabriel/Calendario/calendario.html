@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Calendario</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom navbar-custom" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="../../Pagina Principal/index.html"><img src="https://cdn.discordapp.com/attachments/934106027266281602/1159639702878560398/tempin-removebg-preview.png?ex=653afc22&is=65288722&hm=f906152fe93d337306bb6aa39d7465ed92fe1c5cb5b208164a020d3d9009dd0a&" width="70"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: white;">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Configurações</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Usuário</a></li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section id="calendario">
+        <div id="container">
+            <div id="header">
+              
+                <div id="cabecalho">
+                    <button id="backButton" class="btn btn-primary"><</button>
+                  <div id="monthDisplay"></div>
+                    <button id="nextButton" class="btn btn-primary">></button>
+                </div>
+
+            </div>
+
+            <div id="weekdays">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sáb</div>
+            </div>
+
+            <div id="calendar"></div>
+
+
+        </div>
+
+        <div id="newEventModal">
+            <h2>Novo Evento</h2>
+
+            <input id="eventTitleInput" placeholder="Evento" />
+
+            <button id="saveButton"> Salvar</button>
+            <button id="cancelButton">Cancelar</button>
+        </div>
+
+        <div id="deleteEventModal">
+            <h2>Evento</h2>
+
+            <div id="eventText"></div><br>
+
+            <button id="deleteButton">Deletar</button>
+            <button id="closeButton">Fechar</button>
+        </div>
+
+        <div id="modalBackDrop"></div>
+
+        <script src="script.js"></script>
+        </section>
+        <section id="outros">
+            <div>
+                <button id="atividades"class="btn btn-primary" onclick="window.location.href='../../Joao/NossaParte100/atividades.html'"><h2>Ver Atividades</h2></button>
+            </div>
+        </section>
+    </main>

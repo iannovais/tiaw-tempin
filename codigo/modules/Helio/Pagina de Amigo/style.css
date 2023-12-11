@@ -1,0 +1,106 @@
+body {
+    background-color: #ffffff;
+}
+
+.all{
+    padding: 3%;
+    padding-top: 1%;
+}
+
+.favorite-activity {
+    display: inline-block; 
+    border-radius: 15px;
+    padding: 10px;
+    margin: 1px;
+    width: calc(33.33% - 10px);
+    text-align: center;
+    vertical-align: top; }
+
+.favorite-activity img {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 320px;
+}
+
+.navbar-brand img {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .custom-navbar {
+    background-color: #042435;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 19px;
+    color: white !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #b1f3ef !important;
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 0 10px;
+  }
+
+  #Amigos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 -10px; 
+}
+
+.amigo-activity {
+    flex: 0 0 calc(33% - 20px); 
+    box-sizing: border-box;
+    border: 2px solid #f0f0f0e1;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.amigo-activity img {
+    margin-left: 10px;
+    width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 15px; 
+    margin-right: 10px; 
+}
+
+.amigo-details {
+    text-align: left;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.amigo-details h2 {
+    margin-bottom: 5px;
+}
+
+.amigo-details p {
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+
+.remove-selected-button {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+h2{
+    color: #34c0d3;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,129 @@
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2%;
+}
+
+.bg-custom {
+    background-color: #042435;;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link {
+    font-weight: bolder;
+    color: white;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link:hover {
+    color: #34c0d3;
+  }
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#searchInput {
+    width: 86%; 
+    padding: 10px; 
+    font-size: 18px; 
+    background-color: #f2f2f2e1;
+    border: none;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-left: 5%;
+    margin-bottom: -2%;
+    font-weight: bolder;
+    color: black;
+    padding: 2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sistema{
+    font-size: 27px;
+    margin-left: 10%;
+    color: #34c0d3;
+    font-weight: bolder;
+}
+
+.faq-list {
+    cursor: pointer;
+    max-width: 80%;
+    margin-left: 10%;
+}
+
+.faq-item {
+    border: 2px solid #f0f0f0e1;
+    cursor: pointer;
+    margin-top: 30px;
+    padding: 1.5%;
+}
+
+.answer {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.fas {
+    float: right;
+    color: #34c0d3; /* Substitua #0000ff pelo código da cor desejada para o ícone */
+}
+
+@media screen and (max-width: 480px) {
+    .faq-item {
+        border: 2px solid #f0f0f0e1;
+        cursor: pointer;
+        margin-top: 30px;
+        padding: 5%;
+        padding-right: 40px; /* Aumente este valor conforme necessário */
+        position: relative; /* Adicionado para o posicionamento relativo */
+        overflow: hidden; /* Adicionado para evitar que o texto ultrapasse o ícone */
+    }
+    
+    .fas {
+        position: absolute;
+        top: 29px;
+        right: 10px; /* Ajuste conforme necessário */
+        transform: translateY(-50%);
+    }
+    
+    .answer {
+        font-size: 18px;
+        margin-top: 20px;
+        overflow: hidden; /* Adicionado para evitar que o texto ultrapasse o ícone */
+    }
+    
+    /* Adicione uma nova classe para o ícone quando o texto estiver visível */
+    .icon-visible .fas {
+        display: block;
+    }
+}
