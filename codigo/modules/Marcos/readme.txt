@@ -1,1 +1,1 @@
-oi taverna
+Funcionalidades desenvolvidas pelo Marcos Taveira.
