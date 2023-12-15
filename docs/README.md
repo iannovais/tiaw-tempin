@@ -2,5 +2,7 @@
 
 # Documentos do Projeto
 
+A seguir, você encontrará links importantes relacionados ao projeto TempIn, abrangendo sua apresentação e documentação completa:
+
 * [Apresentação do Projeto](https://github.com/iannovais/tiaw-tempin/tree/main/docs/Apresenta%C3%A7%C3%A3o)
 * [Documentação Completa do Projeto](https://github.com/iannovais/tiaw-tempin/tree/main/docs/Documenta%C3%A7%C3%A3o)
