@@ -50,8 +50,8 @@ function adicionarAtividadeNoMapa(enderecoCompleto, nome) {
   geocodeEndereco(enderecoCompleto, function(lat, lng) {
     var li = document.createElement('li');
     li.innerHTML = nome + '<br>' +
-      '<button class="marcar-no-mapa" onclick="marcarNoMapa(' + lat + ', ' + lng + ')">📍 Marcar no Mapa</button>' +
-      '<button class="tracar-rota" onclick="tracarRota(' + lat + ', ' + lng + ')">🚘 Traçar Rota</button>';
+      '<button class="marcar-no-mapa" onclick="marcarNoMapa(' + lat + ', ' + lng + ')"><i class="fas fa-map-marker"></i> Marcar no Mapa</button>' +
+      '<button class="tracar-rota" onclick="tracarRota(' + lat + ', ' + lng + ')"><i class="far fa-map"></i> Traçar Rota</button>';
 
     if (!document.getElementById('endereco-list').innerHTML.includes(nome)) {
       document.getElementById('endereco-list').appendChild(li);
