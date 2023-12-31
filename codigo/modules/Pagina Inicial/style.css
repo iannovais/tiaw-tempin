@@ -1,5 +1,6 @@
 .bg-custom {
-  background-color: #042435;;
+  background-color: #042435;
+  ;
 }
 
 .navbar-nav {
@@ -31,7 +32,7 @@ body {
 
 #botao {
   background-color: #fff;
-  color: #34c0d3; 
+  color: #34c0d3;
   border: none;
   padding: 10px 20px;
   font-size: 18px;
@@ -40,10 +41,10 @@ body {
 }
 
 #botao:hover {
-  background-color: #ddd; 
+  background-color: #ddd;
 }
 
-.slogan{
+.slogan {
   font-size: 220%;
   font-weight: bolder;
   background-color: #34c0d3;

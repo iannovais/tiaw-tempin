@@ -1,11 +1,39 @@
-body {
-    background-color: #ffffff;
-}
-
-.all{
-    padding: 3%;
-    padding-top: 1%;
-}
+.bg-custom {
+    background-color: #042435;;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link {
+    font-weight: bolder;
+    color: white;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link:hover {
+    color: #b1f3ef;
+  }
+  
+  .data-conteudo {
+    margin-bottom: -70px;
+  }
+  
+  * {
+    text-decoration: none;
+    padding: 0%;
+    font-family: Helvetica;
+    box-sizing: border-box;
+  }
+  
+  .all {
+    padding: 2% 4%;
+    background-color: white;
+  }
+  
+  body {
+    background-color: #fff;
+  }
 
 .favorite-activity {
     display: inline-block; 
@@ -14,7 +42,8 @@ body {
     margin: 1px;
     width: calc(33.33% - 10px);
     text-align: center;
-    vertical-align: top; }
+    vertical-align: top; 
+}
 
 .favorite-activity img {
     border-radius: 15px;
@@ -22,29 +51,7 @@ body {
     max-height: 320px;
 }
 
-.navbar-brand img {
-    max-width: 50%;
-    height: auto;
-  }
-  
-  .custom-navbar {
-    background-color: #042435;
-  }
-  
-  .navbar-nav .nav-link {
-    font-size: 19px;
-    color: white !important;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #b1f3ef !important;
-  }
-  
-  .navbar-nav .nav-item {
-    padding: 0 10px;
-  }
-
-  #Amigos {
+#Amigos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -96,8 +103,14 @@ body {
     border-radius: 5px;
 }
 
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
 h2{
     color: #34c0d3;
+    font-size: 23px;
 }
 
 .button-container {

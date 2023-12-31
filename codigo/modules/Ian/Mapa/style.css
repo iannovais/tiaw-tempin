@@ -90,8 +90,9 @@ button.tracar-rota:hover {
   background-color: #073e5c;
 }
 
-h3 {
+h1 {
   font-weight: bold;
+  font-size: 24px;
 }
 
 @media screen and (max-width: 480px) {

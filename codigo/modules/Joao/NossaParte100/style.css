@@ -3,7 +3,6 @@
   padding: 0%;
   font-family: Helvetica;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -13,7 +12,6 @@ body {
 h1 {
   font-weight: bold;
   font-size: 24px;
-  margin: 20px 0;
 }
 
 .bg-custom {
@@ -247,7 +245,7 @@ body {
   background-color: white;
   margin: 0 auto;
   border: 0px;
-  max-width: 100%; /* Adição de uma largura máxima para o card */
+  max-width: 100%;
 }
 
 #map-container {
@@ -257,14 +255,14 @@ body {
 }
 
 .atividade-info-container {
-    width: 60%; /* Ajuste a largura conforme necessário */
+    width: 60%; 
     padding: 10px;
     box-sizing: border-box;
 }
 
 .atividade-map-container {
     width: 40%;
-    max-width: 100%; /* Garante que a largura não ultrapasse 100% da div pai */
+    max-width: 100%;
     height: 400px;
 }
 #cadastro {
