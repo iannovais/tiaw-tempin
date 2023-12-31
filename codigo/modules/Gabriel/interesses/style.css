@@ -20,13 +20,20 @@ main>div>div>div>div {
 }
 
 main {
-  margin-left: 2%;
-  margin-top: 1%;
-  
+  padding: 2% 4%;
+  background-color: white;
+  margin-bottom: 100px;
 }
+
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
 body{
   background-color: #ffffff !important;
 }
+
 .interesses{
   display:flex !important;
   float: left !important;
@@ -50,4 +57,26 @@ body{
 }
 #botaoSeguir{
   border: #042435 1px solid;
+}
+
+.interesses label.btn {
+  color: #34c0d3;
+  border-color: #34c0d3;
+}
+
+.interesses label.btn:hover {
+  color: #139aac;
+  border-color: #139aac;
+}
+
+.interesses label.btn.clicked{
+  color: white;
+  background-color: #34c0d3;
+  border-color: #34c0d3;
+}
+
+.interesses label.btn.clicked:hover{
+  color: white;
+  background-color: #139aac;
+  border-color: #139aac;
 }
