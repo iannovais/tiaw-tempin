@@ -1,1 +1,1 @@
-oi jolonga
+Funcionalidades desenvolvidas pelo João Antônio.

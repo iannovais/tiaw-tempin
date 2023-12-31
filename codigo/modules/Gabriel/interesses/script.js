@@ -21,7 +21,3 @@ document.getElementById('botoes').addEventListener('click', function(event) {
         event.target.classList.toggle('clicked');
     }
 });
-
-document.getElementById('botaoSeguir').addEventListener('click', function() {
-    alert('Interesses cadastrados!');
-  });

@@ -5,25 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TempIn</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/934106027266281602/1159639702878560398/tempin-removebg-preview.png?ex=654d7122&is=653afc22&hm=5b73c6b1ed72a0553b4b2ad1fb8e85ba0ccafce6325680f0556c452a4bc85df5&">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="login.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script>
-        // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
+    <script>    
         if (!usuarioCorrente.login) {
             window.location.href = LOGIN_URL;
         }
 
         function exibeUsuarios() {
             
-            // Popula a tabela com os registros do banco de dados
             let listaUsuarios = '';
             for (i = 0; i < db_usuarios.usuarios.length; i++) {
                 let usuario = db_usuarios.usuarios[i];
                 listaUsuarios += `<tr><td scope="row">${usuario.nome}</td><td>${usuario.login}</td><td>${usuario.email}</td></tr>`;
             }
 
-            // Substitui as linhas do corpo da tabela
             document.getElementById("table-usuarios").innerHTML = listaUsuarios
 
         }
