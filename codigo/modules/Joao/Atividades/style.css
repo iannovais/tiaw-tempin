@@ -15,7 +15,8 @@ h1 {
 }
 
 .bg-custom {
-  background-color: #042435;;
+  background-color: #042435;
+  ;
 }
 
 .navbar-nav {
@@ -48,17 +49,17 @@ h1 {
 }
 
 .search-and-filter {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search-box {
-    display: flex;
-    flex: 1;
-    background-color: #f2f2f2e1;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
+  display: flex;
+  flex: 1;
+  background-color: #f2f2f2e1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .dropbtn {
@@ -72,33 +73,33 @@ h1 {
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    right: 0;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
 }
 
 .dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: black;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .card-container {
@@ -120,7 +121,7 @@ h1 {
 .card-header {
   padding: 0px;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   border: none;
@@ -189,7 +190,7 @@ h1 {
 }
 
 .error-message img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 480px) {
@@ -210,17 +211,17 @@ h1 {
   }
 
   .card-container {
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
   }
 }
 
 body {
-  background-color: #ffffff; 
-  font-family: 'Roboto', sans-serif; 
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
 }
 
-.atividade-body{
+.atividade-body {
   border: 2px solid #f0f0f0e1;
   margin-left: -10%;
   border-radius: 10px;
@@ -229,13 +230,13 @@ body {
   text-align: left;
 }
 
-.atividade-titulo{
+.atividade-titulo {
   color: #34c0d3;
   font-weight: bolder;
   font-size: 30px;
 }
 
-.atividade-genero{
+.atividade-genero {
   font-size: 16px;
   margin-bottom: 0px;
 }
@@ -249,22 +250,23 @@ body {
 }
 
 #map-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .atividade-info-container {
-    width: 60%; 
-    padding: 10px;
-    box-sizing: border-box;
+  width: 60%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .atividade-map-container {
-    width: 40%;
-    max-width: 100%;
-    height: 400px;
+  width: 40%;
+  max-width: 100%;
+  height: 400px;
 }
+
 #cadastro {
   display: block;
   margin: 0 auto;

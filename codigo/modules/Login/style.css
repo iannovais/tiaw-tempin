@@ -1,37 +1,38 @@
-body, html {
-    height: 100%;
-    margin: 0;
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
 #login-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
 }
 
 #left-panel {
-    background: #042435;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: #042435;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cadastro-title,
 .cadastro-text,
 .btn-info {
-    text-align: center;
-    margin: 10px;
+  text-align: center;
+  margin: 10px;
 }
 
-.cadastro-title{
+.cadastro-title {
   color: white;
   font-size: 30px;
   font-weight: bolder;
   margin-bottom: -5px;
 }
 
-.cadastro-text{
+.cadastro-text {
   color: #d6faff;
   font-size: 20px;
 }
@@ -49,34 +50,34 @@ body, html {
 }
 
 #right-panel {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 #login-column {
-    max-width: 100px;
-    width: 50%;
+  max-width: 100px;
+  width: 50%;
 }
 
 #login-box {
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px; 
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #login-box label {
-    text-align: left; 
-    display: block; 
-    margin-bottom: -20px; 
+  text-align: left;
+  display: block;
+  margin-bottom: -20px;
 }
 
 #login-box input[type="text"],
 #login-box input[type="password"] {
-  background-color: #f0f0f0e1; 
+  background-color: #f0f0f0e1;
   border: none;
   color: #000000;
 }
@@ -93,12 +94,13 @@ body, html {
 }
 
 .text-info {
-  color: #042435!important;
+  color: #042435 !important;
 }
 
 #icone {
   color: white;
-  font-size: 3em; /* Ajuste o tamanho conforme necessário */
+  font-size: 3em;
+  /* Ajuste o tamanho conforme necessário */
 }
 
 .error-border {

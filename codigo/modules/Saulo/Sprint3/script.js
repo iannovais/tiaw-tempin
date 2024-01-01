@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const atividadesContainer = document.getElementById("atividades");
   const favoritosList = document.getElementById("favoritos");
   const favoritosScreenList = document.getElementById("favoritos-screen-list");
@@ -108,12 +108,12 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }
 
-  verFavoritosButton.addEventListener("click", function() {
+  verFavoritosButton.addEventListener("click", function () {
     document.getElementById("favoritos-list").style.display = "block";
     document.getElementById("atividades").style.display = "none";
   });
 
-  voltarButton.addEventListener("click", function() {
+  voltarButton.addEventListener("click", function () {
     document.getElementById("favoritos-screen").style.display = "none";
     document.getElementById("favoritos-list").style.display = "none";
     document.getElementById("atividades").style.display = "block";

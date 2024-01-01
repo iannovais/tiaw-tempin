@@ -27,7 +27,7 @@ function carregarAtividades() {
       if (data.length === 0) {
         enderecoList.innerHTML = '<p>Ainda não existem atividades cadastradas.</p>';
       } else {
-        data.forEach(function(atividade) {
+        data.forEach(function (atividade) {
           if (atividade.categoria && atividade.categoria.toLowerCase() === "presencial") {
             var enderecoCompleto = atividade.endereco;
             var nome = atividade.nome;
@@ -47,7 +47,7 @@ function carregarAtividades() {
 }
 
 function adicionarAtividadeNoMapa(enderecoCompleto, nome) {
-  geocodeEndereco(enderecoCompleto, function(lat, lng) {
+  geocodeEndereco(enderecoCompleto, function (lat, lng) {
     var li = document.createElement('li');
     li.innerHTML = nome + '<br>' +
       '<button class="marcar-no-mapa" onclick="marcarNoMapa(' + lat + ', ' + lng + ')"><i class="fas fa-map-marker"></i> Marcar no Mapa</button>' +
@@ -95,7 +95,7 @@ function marcarNoMapa(lat, lng) {
         position: destino
       });
       currentMarker = marker;
-    }, function(error) {
+    }, function (error) {
       alert('OPS! Você precisa permitir a localização no seu navegador para podermos marcar no mapa.');
     });
   } else {
@@ -122,7 +122,7 @@ function tracarRota(destLat, destLng) {
           alert('Não foi possível traçar a rota: ' + status);
         }
       });
-    }, function(error) {
+    }, function (error) {
       alert('OPS! Você precisa permitir a localização no seu navegador para podermos traçar a rota.');
     });
   } else {
@@ -130,6 +130,6 @@ function tracarRota(destLat, destLng) {
   }
 }
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   initMap();
 });

@@ -7,21 +7,21 @@ const deleteEventModal = document.getElementById('deleteEventModal')
 const backDrop = document.getElementById('modalBackDrop')
 const eventTitleInput = document.getElementById('eventTitleInput')
 
-const calendar = document.getElementById('calendar') 
-const weekdays = ['domingo','segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'] 
+const calendar = document.getElementById('calendar')
+const weekdays = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado']
 
-function openModal(date){
+function openModal(date) {
   clicked = date
-  const eventDay = events.find((event)=>event.date === clicked)
- 
-
-  if (eventDay){
-   document.getElementById('eventText').innerText = eventDay.title
-   
-   deleteEventModal.style.display = 'block'
+  const eventDay = events.find((event) => event.date === clicked)
 
 
-  } else{
+  if (eventDay) {
+    document.getElementById('eventText').innerText = eventDay.title
+
+    deleteEventModal.style.display = 'block'
+
+
+  } else {
     newEvent.style.display = 'block'
 
   }
@@ -30,56 +30,56 @@ function openModal(date){
 }
 
 
-function load (){ 
-  const date = new Date() 
-  
-  if(nav !== 0){
-    date.setMonth(new Date().getMonth() + nav) 
+function load() {
+  const date = new Date()
+
+  if (nav !== 0) {
+    date.setMonth(new Date().getMonth() + nav)
   }
-  
+
   const day = date.getDate()
   const month = date.getMonth()
   const year = date.getFullYear()
 
-  
-  
-  const daysMonth = new Date (year, month + 1 , 0).getDate()
-  const firstDayMonth = new Date (year, month, 1)
-  
+
+
+  const daysMonth = new Date(year, month + 1, 0).getDate()
+  const firstDayMonth = new Date(year, month, 1)
+
 
   const dateString = firstDayMonth.toLocaleDateString('pt-br', {
     weekday: 'long',
-    year:    'numeric',
-    month:   'numeric',
-    day:     'numeric',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
   })
-  
 
-  const paddinDays = weekdays.indexOf(dateString.split(', ') [0])
-  
-  document.getElementById('monthDisplay').innerText = `${date.toLocaleDateString('pt-br',{month: 'long'})}, ${year}`
 
-  
-  calendar.innerHTML =''
+  const paddinDays = weekdays.indexOf(dateString.split(', ')[0])
+
+  document.getElementById('monthDisplay').innerText = `${date.toLocaleDateString('pt-br', { month: 'long' })}, ${year}`
+
+
+  calendar.innerHTML = ''
 
   for (let i = 1; i <= paddinDays + daysMonth; i++) {
     const dayS = document.createElement('div')
     dayS.classList.add('day')
 
     const dayString = `${month + 1}/${i - paddinDays}/${year}`
-     
+
     if (i > paddinDays) {
       dayS.innerText = i - paddinDays
-      
 
-      const eventDay = events.find(event=>event.date === dayString)
-      
-      if(i - paddinDays === day && nav === 0){
+
+      const eventDay = events.find(event => event.date === dayString)
+
+      if (i - paddinDays === day && nav === 0) {
         dayS.id = 'currentDay'
       }
 
 
-      if(eventDay){
+      if (eventDay) {
         const eventDiv = document.createElement('div')
         eventDiv.classList.add('event')
         eventDiv.innerText = eventDay.title
@@ -87,18 +87,18 @@ function load (){
 
       }
 
-      dayS.addEventListener('click', ()=> openModal(dayString))
+      dayS.addEventListener('click', () => openModal(dayString))
 
     } else {
       dayS.classList.add('padding')
     }
 
-    
+
     calendar.appendChild(dayS)
   }
 }
 
-function closeModal(){
+function closeModal() {
   eventTitleInput.classList.remove('error')
   newEvent.style.display = 'none'
   backDrop.style.display = 'none'
@@ -109,8 +109,8 @@ function closeModal(){
   load()
 
 }
-function saveEvent(){
-  if(eventTitleInput.value){
+function saveEvent() {
+  if (eventTitleInput.value) {
     eventTitleInput.classList.remove('error')
 
     events.push({
@@ -121,39 +121,39 @@ function saveEvent(){
     localStorage.setItem('events', JSON.stringify(events))
     closeModal()
 
-  }else{
+  } else {
     eventTitleInput.classList.add('error')
   }
 }
 
-function deleteEvent(){
+function deleteEvent() {
 
   events = events.filter(event => event.date !== clicked)
   localStorage.setItem('events', JSON.stringify(events))
   closeModal()
 }
 
-function buttons (){
-  document.getElementById('backButton').addEventListener('click', ()=>{
+function buttons() {
+  document.getElementById('backButton').addEventListener('click', () => {
     nav--
     load()
-    
+
   })
 
-  document.getElementById('nextButton').addEventListener('click',()=>{
+  document.getElementById('nextButton').addEventListener('click', () => {
     nav++
     load()
-    
+
   })
 
-  document.getElementById('saveButton').addEventListener('click',()=> saveEvent())
+  document.getElementById('saveButton').addEventListener('click', () => saveEvent())
 
-  document.getElementById('cancelButton').addEventListener('click',()=>closeModal())
+  document.getElementById('cancelButton').addEventListener('click', () => closeModal())
 
-  document.getElementById('deleteButton').addEventListener('click', ()=>deleteEvent())
+  document.getElementById('deleteButton').addEventListener('click', () => deleteEvent())
 
-  document.getElementById('closeButton').addEventListener('click', ()=>closeModal())
-  
+  document.getElementById('closeButton').addEventListener('click', () => closeModal())
+
 }
 buttons()
 load()

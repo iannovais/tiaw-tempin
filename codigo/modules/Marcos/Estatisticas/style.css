@@ -4,21 +4,21 @@ body {
 }
 
 .bg-custom {
-    background-color: #042435;;
-  }
-  
-  .navbar-nav {
+    background-color: #042435;
+}
+
+.navbar-nav {
     text-align: center;
-  }
-  
-  .navbar-custom .navbar-nav .nav-link {
+}
+
+.navbar-custom .navbar-nav .nav-link {
     font-weight: bolder;
     color: white;
-  }
-  
-  .navbar-custom .navbar-nav .nav-link:hover {
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
     color: #b1f3ef;
-  }
+}
 
 
 a {
@@ -72,13 +72,13 @@ a {
     background-color: #dafffe;
 }
 
-#chart{
+#chart {
     margin-top: 2%;
     margin-left: 50px;
-    left: 20%;  
+    left: 20%;
     color: black;
 }
 
 .bar {
-    fill: #34c0d3; 
+    fill: #34c0d3;
 }

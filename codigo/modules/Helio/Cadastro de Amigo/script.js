@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const amigosContainer = document.getElementById("amigos-container");
   const favoritosList = document.getElementById("favoritos");
   const favoritosScreenList = document.getElementById("favoritos-screen-list");
@@ -75,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function adicionarAmigoNaTela(amigo) {
     const card1 = criarCard(amigo, true, false);
-    card1.id = `amigoList-${amigo.id}`; 
+    card1.id = `amigoList-${amigo.id}`;
     favoritosList.appendChild(card1);
 
     const card2 = criarCard(amigo, true, false);
-    card2.id = `amigoScreen-${amigo.id}`; 
+    card2.id = `amigoScreen-${amigo.id}`;
     favoritosScreenList.appendChild(card2);
   }
 
@@ -100,12 +100,12 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }
 
-  verFavoritosButton.addEventListener("click", function() {
+  verFavoritosButton.addEventListener("click", function () {
     document.getElementById("favoritos-list").style.display = "block";
     document.getElementById("atividades").style.display = "none";
   });
 
-  voltarButton.addEventListener("click", function() {
+  voltarButton.addEventListener("click", function () {
     document.getElementById("favoritos-screen").style.display = "none";
     document.getElementById("favoritos-list").style.display = "none";
     document.getElementById("atividades").style.display = "block";

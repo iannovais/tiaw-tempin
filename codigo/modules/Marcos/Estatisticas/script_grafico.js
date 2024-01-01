@@ -1,6 +1,6 @@
 // Read the JSON data from the "data.json" file
 d3.json("data.json")
-  .then(function(data) {
+  .then(function (data) {
     // Extract the activities data
     const activities = data.atividades;
 
@@ -8,7 +8,7 @@ d3.json("data.json")
     const activityTimeMap = {};
 
     // Calculate the total time spent on each activity
-    activities.forEach(function(activity) {
+    activities.forEach(function (activity) {
       const activityName = activity.atividade;
       const activityTime = parseInt(activity.tempo_gasto);
 
@@ -89,6 +89,6 @@ d3.json("data.json")
       .text("Time Spent on Activities");
 
   })
-  .catch(function(error) {
+  .catch(function (error) {
     console.error("Error loading data: " + error);
   });

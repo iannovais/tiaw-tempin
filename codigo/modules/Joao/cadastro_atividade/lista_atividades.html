@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastro de Atividades</title>
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/934106027266281602/1172217640400457888/tempin-removebg-preview_1.png?ex=655f83c0&is=654d0ec0&hm=ad91dfc9e3d4eccfe2038e13994710b0011d0b1caedf41b575266a2ead089b53&">
+    <link rel="icon"
+        href="https://cdn.discordapp.com/attachments/934106027266281602/1172217640400457888/tempin-removebg-preview_1.png?ex=655f83c0&is=654d0ec0&hm=ad91dfc9e3d4eccfe2038e13994710b0011d0b1caedf41b575266a2ead089b53&">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Listagem de Atividades</h1>
     <div class="container">
@@ -26,17 +29,19 @@
             </div>
         </div>
 
-        <form id="form-atividade">            
+        <form id="form-atividade">
             <div class="form-group row">
                 <div class="col-sm-4">
-                    <select name="filtro_orcamento" id="filtro_orcamento" onchange="ListaAtividades()" class="form-control">
+                    <select name="filtro_orcamento" id="filtro_orcamento" onchange="ListaAtividades()"
+                        class="form-control">
                         <option value="">Selecione o Orçamento</option>
                         <option value="pago">Pago</option>
                         <option value="gratis">Grátis</option>
                     </select>
                 </div>
                 <div class="col-sm-8">
-                    <select name="filtro_categoria" id="filtro_categoria" onchange="ListaAtividades()" class="form-control">
+                    <select name="filtro_categoria" id="filtro_categoria" onchange="ListaAtividades()"
+                        class="form-control">
                         <option value="">Selecione a Categoria</option>
                         <option value="virtual">Virtual</option>
                         <option value="presencial">Presencial</option>
@@ -74,41 +79,42 @@
             ListaAtividades()
         });
 
-      function ListaAtividades() {
-          // Obtenha os valores dos filtros de Orçamento e Categoria
-          let filtroOrcamento = document.getElementById('filtro_orcamento').value;
-          let filtroCategoria = document.getElementById('filtro_categoria').value;
+        function ListaAtividades() {
+            // Obtenha os valores dos filtros de Orçamento e Categoria
+            let filtroOrcamento = document.getElementById('filtro_orcamento').value;
+            let filtroCategoria = document.getElementById('filtro_categoria').value;
 
-          // Limpe a lista de atividades apresentadas
-          tableAtividades = document.getElementById("table-atividades");
-          tableAtividades.innerHTML = "";
+            // Limpe a lista de atividades apresentadas
+            tableAtividades = document.getElementById("table-atividades");
+            tableAtividades.innerHTML = "";
 
-          // Popule a tabela com os registros do banco de dados
-          for (let index = 0; index < db.length; index++) {
-              const atividade = db[index];
+            // Popule a tabela com os registros do banco de dados
+            for (let index = 0; index < db.length; index++) {
+                const atividade = db[index];
 
-              // Verifique se os dados da atividade correspondem aos filtros
-              if (
-                  ((filtroOrcamento === 'pago' && parseFloat(atividade.orcamento) > 0) ||
-                  (filtroOrcamento === 'gratis' && parseFloat(atividade.orcamento) === 0) ||
-                  (filtroOrcamento === '')) &&
-                  ((filtroCategoria === 'virtual' && atividade.categoria === 'Virtual') ||
-                  (filtroCategoria === 'presencial' && atividade.categoria === 'Presencial') ||
-                  (filtroCategoria === ''))
-              ) {
-                  // Inclua a atividade na tabela
-                  tableAtividades.innerHTML += `<tr><td scope="row">${atividade.id}</td>
+                // Verifique se os dados da atividade correspondem aos filtros
+                if (
+                    ((filtroOrcamento === 'pago' && parseFloat(atividade.orcamento) > 0) ||
+                        (filtroOrcamento === 'gratis' && parseFloat(atividade.orcamento) === 0) ||
+                        (filtroOrcamento === '')) &&
+                    ((filtroCategoria === 'virtual' && atividade.categoria === 'Virtual') ||
+                        (filtroCategoria === 'presencial' && atividade.categoria === 'Presencial') ||
+                        (filtroCategoria === ''))
+                ) {
+                    // Inclua a atividade na tabela
+                    tableAtividades.innerHTML += `<tr><td scope="row">${atividade.id}</td>
                       <td>${atividade.genero}</td>
                       <td>${atividade.nome}</td>
                       <td>${atividade.orcamento}</td>
                       <td>${atividade.endereco}</td>
                       <td>${atividade.categoria}</td>
                   </tr>`;
-              }
-          }
-      }
+                }
+            }
+        }
 
 
     </script>
 </body>
+
 </html>

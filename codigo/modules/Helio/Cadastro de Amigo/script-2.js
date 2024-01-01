@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const favoritosScreenList = document.getElementById("favoritos-screen-list");
   const voltarButton = document.getElementById("voltar");
   const apiUrlFavoritos = "https://jsonservertiaw.bebesads.repl.co/personagens";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function voltarParaAtividades() {
     document.getElementById("favoritos-screen").style.display = "none";
     document.getElementById("favoritos-list").style.display = "none";
-    document.getElementById("amigos-container").style.display = "block"; 
+    document.getElementById("amigos-container").style.display = "block";
   }
 
   voltarButton.addEventListener("click", voltarParaAtividades);

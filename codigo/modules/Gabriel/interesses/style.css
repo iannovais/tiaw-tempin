@@ -3,7 +3,8 @@ main>div>div>div>div {
 }
 
 .bg-custom {
-  background-color: #042435;;
+  background-color: #042435;
+  ;
 }
 
 .navbar-nav {
@@ -30,17 +31,18 @@ h1 {
   font-size: 24px;
 }
 
-body{
+body {
   background-color: #ffffff !important;
 }
 
-.interesses{
-  display:flex !important;
+.interesses {
+  display: flex !important;
   float: left !important;
   justify-content: space-around;
   align-items: center;
 
 }
+
 .btn-group {
   flex-wrap: wrap;
 }
@@ -49,13 +51,15 @@ body{
   width: auto;
   margin-right: 5px;
 }
-.seguir{
+
+.seguir {
   padding-top: 15%;
-  padding-bottom:2%;
+  padding-bottom: 2%;
   float: right;
   padding-right: 5%;
 }
-#botaoSeguir{
+
+#botaoSeguir {
   border: #042435 1px solid;
 }
 
@@ -69,13 +73,13 @@ body{
   border-color: #139aac;
 }
 
-.interesses label.btn.clicked{
+.interesses label.btn.clicked {
   color: white;
   background-color: #34c0d3;
   border-color: #34c0d3;
 }
 
-.interesses label.btn.clicked:hover{
+.interesses label.btn.clicked:hover {
   color: white;
   background-color: #139aac;
   border-color: #139aac;

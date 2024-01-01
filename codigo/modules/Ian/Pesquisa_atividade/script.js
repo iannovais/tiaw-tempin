@@ -13,10 +13,10 @@ const termoPesquisa = document.getElementById("termo_pesquisa");
 const cardContainer = document.getElementById("card-container");
 const dropdownContent = document.querySelector(".dropdown-content");
 const dropdownButton = document.querySelector(".dropbtn");
-const dropdown = document.querySelector(".dropdown"); 
+const dropdown = document.querySelector(".dropdown");
 
 let isDropdownOpen = false;
-let hoverEnabled = true; 
+let hoverEnabled = true;
 
 function closeDropdown() {
     isDropdownOpen = false;
@@ -114,13 +114,13 @@ function buscarAtividades(termo, filtro) {
 function exibirAtividadesFiltradas(atividades) {
     cardContainer.innerHTML = "";
 
-  if (atividades.length === 0) {
-      cardContainer.innerHTML = `
+    if (atividades.length === 0) {
+        cardContainer.innerHTML = `
           <div class="error-message">
               <img src="https://img.freepik.com/premium-vector/illustration-leaking-bucket_74669-730.jpg" width="220"/>
               <p>Buscamos por toda parte. Infelizmente, <br>não encontramos nada.</p>
           </div>`;
-  } else {
+    } else {
         atividades.forEach((atividade) => {
             const generoEmojis = {
                 Lazer: "⚽️",
