@@ -20,8 +20,9 @@ function generateUUID() {
 
 const dadosIniciais = {
     usuarios: [
-        { "id": generateUUID(), "login": "admin", "senha": "admin", "nome": "Administrador do Sistema", "email": "admin@abc.com" },
-        { "id": generateUUID(), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com" },
+        { "id": generateUUID(), "login": "admin", "senha": "admin", "nome": "Administrador", "email": "admin@abc.com" },
+        { "id": generateUUID(), "login": "user", "senha": "123", "nome": "Usuario", "email": "user@abc.com" },
+        { "id": generateUUID(), "login": "Ian", "senha": "123", "nome": "Ian", "email": "iandosreisnovais@gmail.com" },
     ]
 };
 

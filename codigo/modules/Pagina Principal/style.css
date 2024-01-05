@@ -10,7 +10,6 @@ body {
 
 .bg-custom {
   background-color: #042435;
-  ;
 }
 
 .navbar-nav {
@@ -24,6 +23,10 @@ body {
 
 .navbar-custom .navbar-nav .nav-link:hover {
   color: #b1f3ef;
+}
+
+.nav-item {
+  margin-right: 15px;
 }
 
 .botoes {
