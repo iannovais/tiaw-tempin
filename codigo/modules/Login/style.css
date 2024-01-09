@@ -11,7 +11,7 @@ html {
 }
 
 #left-panel {
-  background: #042435;
+  background: #1896a7;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +38,7 @@ html {
 }
 
 .btn-info {
-  background-color: #042435;
+  background-color: #1896a7;
   border: none;
   padding: 10px;
   padding-left: 20px;
@@ -46,7 +46,7 @@ html {
 }
 
 .btn-info:hover {
-  background-color: #194e67;
+  background-color: #148796;
 }
 
 #right-panel {
@@ -127,6 +127,6 @@ html {
 }
 
 .btn-cadastrar:hover {
-  background-color: #5a798c;
+  background-color: #a8d7dd;
   color: #042435;
 }
