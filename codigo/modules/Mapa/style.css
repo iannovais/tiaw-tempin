@@ -98,6 +98,19 @@ h1 {
   font-size: 24px;
 }
 
+.error-message {
+  color: #787878;
+  font-weight: bolder;
+  font-size: 17px;
+  text-align: center;
+  margin-top: -1.4%;
+  margin-left: 40%;
+}
+
+.error-message img {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 480px) {
   .navbar-nav {
     text-align: center;
