@@ -151,8 +151,6 @@ function tracarRota(destLat, destLng) {
   }
 }
 
-
-
 window.addEventListener('load', function () {
   initMap();
 });

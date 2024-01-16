@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 favoritosLoaded = true;
             })
             .catch((error) => {
-                console.error("Erro ao carregar as suas atividades favoritas", error);
+                console.error("Erro ao carregar favoritos do servidor.", error);
                 favoritosLoaded = false;
                 exibirMensagemDeErro();
             });

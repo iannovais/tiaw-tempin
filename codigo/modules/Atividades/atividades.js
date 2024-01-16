@@ -137,7 +137,7 @@ function exibirAtividadesFiltradas(atividades) {
         cardContainer.innerHTML = `
             <div class="error-message">
                 <img src="https://img.freepik.com/premium-vector/illustration-leaking-bucket_74669-730.jpg" width="220"/>
-                <p>Buscamos por toda parte. Infelizmente, <br>não encontramos nada.</p>
+                <p>Buscamos por toda parte. Infelizmente,<br>não encontramos nada.</p>
             </div>`;
     } else if(!databaseLoaded) {
         exibirMensagemDeErro();
