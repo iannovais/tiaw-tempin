@@ -1,8 +1,21 @@
 var map;
 var currentMarker = null;
 var directionsRenderer;
-const apiUrl = 'https://9f3bfd58-98f7-41d3-a018-cb47aabfebeb-00-1w0c2ojratvdy.global.replit.dev/atividades';
 var atividadesCarregadas = new Set();
+
+let atividadesLoaded = false;
+let geocodingError = false;
+
+const apiUrl = 'https://9f3bfd58-98f7-41d3-a018-cb47aabfebeb-00-1w0c2ojratvdy.global.replit.dev/atividades';
+
+function exibirMensagemDeErro() {
+  var enderecoList = document.getElementById('endereco-list');
+  enderecoList.innerHTML = `
+    <div class="error-message">
+      <img src="https://img.freepik.com/premium-vector/illustration-leaking-bucket_74669-730.jpg" width="220"/>
+      <p>Ocorreu um erro ao carregar as atividades<br>ou geocodificar o endereço.</p>
+    </div>`;
+}
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -39,14 +52,21 @@ function carregarAtividades() {
           }
         });
       }
+      atividadesLoaded = true;
     })
     .catch(error => {
       console.error('Erro ao ler atividades via API JSONServer:', error);
-      displayMessage("Erro ao ler atividades");
+      exibirMensagemDeErro();
+      atividadesLoaded = false;
     });
 }
 
 function adicionarAtividadeNoMapa(enderecoCompleto, nome) {
+  if (!atividadesLoaded || geocodingError) {
+    exibirMensagemDeErro();
+    return;
+  }
+
   geocodeEndereco(enderecoCompleto, function (lat, lng) {
     var li = document.createElement('li');
     li.innerHTML = nome + '<br>' +
@@ -78,6 +98,7 @@ function geocodeEndereco(endereco, callback) {
     } else {
       console.error('Erro ao geocodificar o endereço:', status);
       displayMessage("Erro ao geocodificar o endereço");
+      geocodingError = true;
     }
   });
 }
@@ -129,6 +150,8 @@ function tracarRota(destLat, destLng) {
     alert('Seu navegador não suporta geolocalização.');
   }
 }
+
+
 
 window.addEventListener('load', function () {
   initMap();

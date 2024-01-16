@@ -20,6 +20,7 @@ let isDropdownOpen = false;
 let hoverEnabled = true;
 let atividades = [];
 let atividadesFavoritas = {};
+let databaseLoaded = false;
 
 const storedFavoritas = localStorage.getItem("atividadesFavoritas");
 if (storedFavoritas) {
@@ -92,7 +93,12 @@ function buscarAtividades(termo, filtro) {
     termo = termo.toLowerCase();
 
     fetch(apiUrl)
-        .then((response) => response.json())
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Erro ao carregar o banco de dados.");
+            }
+            return response.json();
+        })
         .then((data) => {
             atividades = data;
 
@@ -115,9 +121,12 @@ function buscarAtividades(termo, filtro) {
             });
 
             exibirAtividadesFiltradas(atividadesFiltradas);
+            databaseLoaded = true;
         })
         .catch((error) => {
             console.error("Erro na solicitação da API:", error);
+            databaseLoaded = false;
+            exibirMensagemDeErro();
         });
 }
 
@@ -130,6 +139,9 @@ function exibirAtividadesFiltradas(atividades) {
                 <img src="https://img.freepik.com/premium-vector/illustration-leaking-bucket_74669-730.jpg" width="220"/>
                 <p>Buscamos por toda parte. Infelizmente, <br>não encontramos nada.</p>
             </div>`;
+    } else if(!databaseLoaded) {
+        exibirMensagemDeErro();
+        return;
     } else {
         atividades.forEach((atividade) => {
             const generoEmojis = {
@@ -223,15 +235,23 @@ function adicionarAtividadeAoJSON(atividadeId) {
         });
 }
 
+function exibirMensagemDeErro() {
+    cardContainer.innerHTML = `
+        <div class="error-message">
+            <img src="https://img.freepik.com/premium-vector/illustration-leaking-bucket_74669-730.jpg" width="220"/>
+            <p>Ocorreu algum erro ao carregar<br>o banco de dados.</p>
+        </div>`;
+}
+
 function removerDoJSON(atividadeId) {
     fetch(`${personagensApiUrl}/${atividadeId}`, {
         method: "DELETE"
     })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Atividade removida do JSON de personagens:", data);
-        })
-        .catch(error => {
-            console.error("Erro ao remover a atividade do JSON:", error);
-        });
+    .then(response => response.json())
+    .then(data => {
+        console.log("Atividade removida do JSON de personagens:", data);
+    })
+    .catch(error => {
+        console.error("Erro ao remover a atividade do JSON:", error);
+    });
 }

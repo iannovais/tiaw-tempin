@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const personagensApiUrl = "https://1a173742-38b7-42e1-8ff3-1886f2973da5-00-1m2rzaxengebl.worf.replit.dev/atividades";
     const termoPesquisa = document.getElementById("termo_pesquisa_favoritos");
 
+    let favoritosLoaded = false;
+
     carregarFavoritosDoServidor("");
 
     termoPesquisa.addEventListener("input", function () {
@@ -10,25 +12,46 @@ document.addEventListener("DOMContentLoaded", function () {
         carregarFavoritosDoServidor(termo);
     });
 
+    function exibirMensagemDeErro() {
+        favoritosList.innerHTML = `
+            <div class="error-message">
+                <img src="https://img.freepik.com/premium-vector/illustration-leaking-bucket_74669-730.jpg" width="220"/>
+                <p>Ocorreu algum erro ao carregar<br>o banco de dados</p>
+            </div>`;
+    }
+
     function carregarFavoritosDoServidor(termo) {
         fetch(personagensApiUrl)
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Erro ao carregar favoritos do servidor.");
+                }
+                return response.json();
+            })
             .then((data) => {
                 const favoritosFiltrados = termo
                     ? data.filter((favorito) => favorito.nome.toLowerCase().includes(termo.toLowerCase()))
                     : data;
-
+    
                 favoritosList.innerHTML = "";
                 favoritosFiltrados.forEach((favorito) => {
                     adicionarFavoritoNaTela(favorito);
                 });
+                favoritosLoaded = true;
             })
             .catch((error) => {
-                console.error("Erro ao carregar favoritos do servidor:", error);
+                console.error("Erro ao carregar as suas atividades favoritas", error);
+                favoritosLoaded = false;
+                exibirMensagemDeErro();
             });
     }
 
     function adicionarFavoritoNaTela(favorito) {
+        if (!favoritosLoaded) {
+            exibirMensagemDeErro();
+            return;
+        }
+    
         const card = criarCard(favorito);
         favoritosList.appendChild(card);
     }
